@@ -1,0 +1,14 @@
+.pane{
+}
+.pane-title{
+  height: 86px;
+  font-size: 38px;
+  display: flex;
+  align-items: center;
+}
+.pane-title-bar{
+  width: 6px;
+  background-color: #D13C37;
+  height: 32px;
+  margin-right: 15px;
+}

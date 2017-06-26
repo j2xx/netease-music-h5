@@ -1,0 +1,21 @@
+.button{
+  font-size: 32px;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  height: 88px;
+  line-height: 88px;
+  padding: 0 20px;
+}
+.button-sm{
+  height: 40px;
+  line-height: 40px;
+  font-size: 26px;
+}
+.button-ghost{
+  border: 1px solid #D23D39;
+  color: #D23D39;
+}
+.button-circle{
+  border-radius: 88px;
+}

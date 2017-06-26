@@ -1,0 +1,43 @@
+.cell{
+  font-size: 34px;
+  display: flex;
+  align-items: center;
+  min-height: 88px;
+}
+.cell-thumb{
+  flex-basis: 100px;
+  display: flex;
+  justify-content: center;
+  color: #D13C37;
+  padding: 0 10px;
+}
+.cell-thumb img{
+  width: 100px;
+  height: 100px;
+}
+.cell-line{
+  flex: 1;
+  display: flex;
+  border-bottom: 1px solid #ddd;
+  padding-right: 30px;
+}
+.cell-content{
+  flex: 1;
+  padding: 20px;
+}
+.cell-brief{
+  font-size: 24px;
+  color: #979798;
+}
+.cell-extra{
+  font-size: 28px;
+  color: #979798;
+  display: flex;
+  align-items: center;
+}
+.cell-arrow{
+  color: #979798;
+  display: flex;
+  align-items: center;
+  margin-left: 10px;
+}

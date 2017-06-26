@@ -1,0 +1,25 @@
+.tab-head{
+  font-size: 30px;
+  display: flex;
+}
+.tab-nav{
+  flex: 1;
+  height: 87px;
+  line-height: 87px;
+  text-align: center;
+  position: relative;
+}
+.tab-nav-active{
+  color: #D13C37;
+}
+.tab-nav-bar{
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+  right: 0;
+  height: 2px;
+  margin: 0 40px;
+}
+.tab-nav-active .tab-nav-bar{
+  background-color: #D23D39;
+}

@@ -1,0 +1,21 @@
+.accordion{
+  font-size: 26px;
+}
+.accordion-head{
+  display: flex;
+  align-items: center;
+  background-color: #ddd;
+  color: #878787;
+  padding: 10px;
+  font-weight: 200;
+}
+.accordion-head .icon{
+  margin-right: 10px;
+  transform: rotate(90deg);
+}
+.accordion-close .icon{
+  transform: rotate(0);
+}
+.accordion-close .accordion-body{
+  display: none;
+}

@@ -1,0 +1,70 @@
+.card{
+  font-size: 30px;
+  padding: 15px 0;
+  border-bottom: 1px solid #ddd;
+}
+
+.card-head{
+  display: flex;
+}
+.card-head-thumb{
+  flex-basis: 100px;
+  padding: 10px 20px;
+}
+.card-head-thumb img{
+  width: 100%;
+  border-radius: 50px;
+}
+.card-head-text{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex: 1;
+}
+.card-head-title{
+  display: flex;
+}
+.card-head-name{
+  flex: 1;
+}
+.card-head-name a{
+  color: #7198E1;
+}
+.card-head-name span{
+  margin-left: 20px;
+  color: #878787;
+}
+.card-head-btn{
+  display: flex;
+  align-items: center;
+  margin-right: 20px;
+  color: #D13C37;
+}
+.card-head-desc{
+  color: #A7A7A7;
+  font-size: 24px;
+}
+
+.card-body{
+  margin-left: 140px;
+}
+.car-body-note{
+  color: #A7A7A7;
+  font-size: 26px;
+}
+
+.card-foot{
+  display: flex;
+  color: #979798;
+  margin-left: 140px;
+  font-size: 26px;
+}
+.card-foot div{
+  flex: 1;
+  display: flex;
+  align-items: center;
+}
+.card-foot-more{
+  margin-right: 20px;
+  justify-content: flex-end;
+}
