@@ -1,6 +1,17 @@
+.tabs{
+}
 .tab-head{
+  background-color: #fff;
   font-size: 30px;
   display: flex;
+  position: fixed;
+  z-index: 1;
+  top: 90px;
+  left: 0;
+  right: 0;
+}
+.tab-body{
+  padding-top: 88px;
 }
 .tab-nav{
   flex: 1;

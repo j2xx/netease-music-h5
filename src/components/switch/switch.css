@@ -45,9 +45,9 @@
   background: #fff;
 }
 .switch input:checked + i{
-  transform:translateX(100%);
+  transform: translateX(100%);
 }
 .switch input:checked + i:before{
   display: inline-block;
-  transform:translateX(-50%);
+  transform: translateX(-50%);
 }

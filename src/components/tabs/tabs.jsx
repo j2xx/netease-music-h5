@@ -5,7 +5,7 @@ export default class Tabs extends Component {
     const { children } = this.props;
     const navs = [];
     const panes = [];
-    this.props.children.map(pane=>{
+    this.props.children.forEach(pane=>{
       navs.push(<div>{pane.title}</div>);
       panes.push(pane);
     });
@@ -14,12 +14,12 @@ export default class Tabs extends Component {
         {
           children.map((pane, index)=>{
             return <div 
-                      key={index} 
-                      className={index===0?'tab-nav tab-nav-active':'tab-nav'}
-                    >
-                      {pane.props.title}
-                      <div className="tab-nav-bar"></div>
-                    </div>
+              key={index} 
+              className={index===0?'tab-nav tab-nav-active':'tab-nav'}
+            >
+              {pane.props.title}
+              <div className="tab-nav-bar"></div>
+            </div>
           })
         }
       </div>

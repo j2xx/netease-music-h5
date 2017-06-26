@@ -18,8 +18,10 @@
 .cell-line{
   flex: 1;
   display: flex;
-  border-bottom: 1px solid #ddd;
   padding-right: 30px;
+}
+.cell+.cell .cell-line{
+  border-top: 1px solid #ddd;
 }
 .cell-content{
   flex: 1;
