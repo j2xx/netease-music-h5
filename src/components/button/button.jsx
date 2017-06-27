@@ -9,6 +9,7 @@ export default class Button extends Component {
       'button': true,
       [`button-${type}`]: true,
       'button-circle': this.props.circle,
+      'button-inline': this.props.inline,
       [`button-${size}`]: true
     })
     return <div className={className}>

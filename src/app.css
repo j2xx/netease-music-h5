@@ -18,15 +18,27 @@ div > img{
 .flex-column{
   flex-direction: column;
 }
+.flex-right{
+  justify-content: flex-end;
+}
 .mine .cell .icon{
   color: #979798;
 }
 
 .menu {
   font-size: 24px;
-  padding: 10px 0 20px;
+  padding: 20px;
   border-bottom: 1px solid #ddd;
 }
 .menu .icon{
   color: #D23D39;
+}
+.menu-lg{
+  font-size: 32px;
+}
+.menu-md{
+  font-size: 28px;
+}
+.line-right{
+  border-right: 1px solid #ddd;
 }

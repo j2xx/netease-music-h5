@@ -51,7 +51,7 @@ export default class Mine extends Component {
       <Cell thumb={<Icon src={sendSvg} />} arrow>分享网易云音乐</Cell>
       <Cell thumb={<Icon src={promptSvg} />} arrow>关于</Cell>
       <div style={{height: '.1rem', backgroundColor: '#F5F5F5'}}></div>
-      <Button>
+      <Button size="lg">
         退出登录
       </Button>
       <div style={{height: '1rem'}}></div>

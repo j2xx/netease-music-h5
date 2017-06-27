@@ -1,11 +1,16 @@
 .button{
-  font-size: 32px;
+  font-size: 28px;
   display: flex;
   align-content: center;
   justify-content: center;
+  height: 60px;
+  line-height: 60px;
+  padding: 0 20px;
+}
+.button-lg{
   height: 88px;
   line-height: 88px;
-  padding: 0 20px;
+  font-size: 32px;
 }
 .button-sm{
   height: 40px;
@@ -18,4 +23,12 @@
 }
 .button-circle{
   border-radius: 88px;
+}
+.button-inline{
+  display: inline;
+  padding: 10px 20px 10px 30px;
+}
+.button-inline .icon{
+  position: relative;
+  top: 4px;
 }

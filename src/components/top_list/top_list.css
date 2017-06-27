@@ -1,0 +1,23 @@
+.top-list{
+  font-size: 26px;
+  display: flex;
+}
+.top-list-thumb{
+  flex-basis: 30%;
+}
+.top-list-thumb img{
+  width: 100%;
+}
+.top-list-rows{
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 20px;
+  margin: 0;
+}
+.top-list-rows div{
+  flex: 1;
+  display: flex;
+  align-items: center;
+}

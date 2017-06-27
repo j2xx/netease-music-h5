@@ -3,14 +3,19 @@ import SearchBar from '../components/search_bar';
 import Tabs from '../components/tabs';
 import Pane from '../components/pane';
 import MediaList from '../components/media_list';
+import TopList from '../components/top_list';
 import Slider from '../components/slider';
 import Icon from '../components/icon';
+import Button from '../components/button';
 
 import TabBar from '../containers/tab_bar';
 
 import videoSvg from '../icons/video.svg';
 import remindSvg from '../icons/remind.svg';
 import stealthSvg from '../icons/stealth.svg';
+import enterSvg from '../icons/enter.svg';
+import manageSvg from '../icons/manage.svg';
+import createtaskSvg from '../icons/createtask.svg';
 
 
 const TabPane = Tabs.TabPane;
@@ -24,8 +29,8 @@ class Home extends Component {
       <div className="home">
         <SearchBar />
         <div style={{height: '.9rem'}} />
-        <Tabs>
-          <TabPane title="个性推荐">
+        <Tabs active="home">
+          <TabPane key="home" title="个性推荐">
 
             <Slider />
             <div className="flex-container menu">
@@ -95,14 +100,115 @@ class Home extends Component {
               </MediaList>
             </Pane>
           </TabPane>
-          <TabPane title="歌单">
+          <TabPane key="music" title="歌单">
 
+            <Slider />
+            <div className="flex-container menu menu-md">
+              <div>
+                <Button type="ghost" circle inline>全部歌单<Icon src={enterSvg} size=".3"/></Button>
+              </div>
+              <div className="flex-container flex-right">
+                <div className="flex-container line-right">
+                  华语
+                </div>
+                <div className="flex-container line-right">
+                  民谣
+                </div>
+                <div className="flex-container">
+                  电子
+                </div>
+              </div>
+            </div>
+            <MediaList type="mv">
+              <MediaItem src="http://dummyimage.com/600x600" alt="" title="国风电音||一曲登仙_西洋人的中华古韵"/>
+              <MediaItem src="http://dummyimage.com/600x600" alt="" title="『电影杀手』刀尖上行走，子弹亦跳舞"/>
+              <MediaItem src="http://dummyimage.com/600x600" alt="" title="德国的先锋音乐：泡菜摇滚Krautrock"/>
+              <MediaItem src="http://dummyimage.com/600x600" alt="" title="PB R&B 灌入色彩的迷离嗓音"/>
+              <MediaItem src="http://dummyimage.com/600x600" alt="" title="国风电音||一曲登仙_西洋人的中华古韵"/>
+              <MediaItem src="http://dummyimage.com/600x600" alt="" title="『电影杀手』刀尖上行走，子弹亦跳舞"/>
+              <MediaItem src="http://dummyimage.com/600x600" alt="" title="德国的先锋音乐：泡菜摇滚Krautrock"/>
+              <MediaItem src="http://dummyimage.com/600x600" alt="" title="PB R&B 灌入色彩的迷离嗓音"/>
+              <MediaItem src="http://dummyimage.com/600x600" alt="" title="国风电音||一曲登仙_西洋人的中华古韵"/>
+              <MediaItem src="http://dummyimage.com/600x600" alt="" title="『电影杀手』刀尖上行走，子弹亦跳舞"/>
+              <MediaItem src="http://dummyimage.com/600x600" alt="" title="德国的先锋音乐：泡菜摇滚Krautrock"/>
+              <MediaItem src="http://dummyimage.com/600x600" alt="" title="PB R&B 灌入色彩的迷离嗓音"/>
+              <MediaItem src="http://dummyimage.com/600x600" alt="" title="国风电音||一曲登仙_西洋人的中华古韵"/>
+              <MediaItem src="http://dummyimage.com/600x600" alt="" title="『电影杀手』刀尖上行走，子弹亦跳舞"/>
+              <MediaItem src="http://dummyimage.com/600x600" alt="" title="德国的先锋音乐：泡菜摇滚Krautrock"/>
+              <MediaItem src="http://dummyimage.com/600x600" alt="" title="PB R&B 灌入色彩的迷离嗓音"/>
+            </MediaList>
           </TabPane>
-          <TabPane title="电台主播">
+          <TabPane key="fm" title="电台主播">
 
+            <Slider />
+
+            <div className="flex-container menu menu-lg">
+              <div className="flex-container line-right">
+                <Icon src={manageSvg} size=".88"/>
+                电台分类
+              </div>
+              <div className="flex-container">
+                <Icon src={createtaskSvg} size=".88"/>
+                电台排行
+              </div>
+            </div>
+            <Pane title="电台个性推荐">
+              <MediaList type="music">
+                <MediaItem src="" alt="" title="网易20周年，我们与你一起走过" desc=""/>
+                <MediaItem src="" alt="" title="经典怀旧 | 哼着妈妈唱过的老歌" desc=""/>
+                <MediaItem src="" alt="" title="『不悔梦归处 只恨太匆匆』" desc=""/>
+                <MediaItem src="" alt="" title="网易20周年，我们与你一起走过" desc=""/>
+                <MediaItem src="" alt="" title="经典怀旧 | 哼着妈妈唱过的老歌" desc=""/>
+                <MediaItem src="" alt="" title="『不悔梦归处 只恨太匆匆』" desc=""/>
+              </MediaList>
+            </Pane>
           </TabPane>
-          <TabPane title="排行榜">
-
+          <TabPane key="top" title="排行榜">
+            <TopList thumb="http://dummyimage.com/300x300">
+              <span>演员 - 薛之谦</span>
+              <span>安和桥 - 宋冬野</span>
+              <span>十年 - 陈奕迅</span>
+            </TopList>
+            <div style={{height: '0.05rem'}}></div>
+            <TopList thumb="http://dummyimage.com/300x300">
+              <span>演员 - 薛之谦</span>
+              <span>安和桥 - 宋冬野</span>
+              <span>十年 - 陈奕迅</span>
+            </TopList>
+            <div style={{height: '0.05rem'}}></div>
+            <TopList thumb="http://dummyimage.com/300x300">
+              <span>演员 - 薛之谦</span>
+              <span>安和桥 - 宋冬野</span>
+              <span>十年 - 陈奕迅</span>
+            </TopList>
+            <div style={{height: '0.05rem'}}></div>
+            <TopList thumb="http://dummyimage.com/300x300">
+              <span>演员 - 薛之谦</span>
+              <span>安和桥 - 宋冬野</span>
+              <span>十年 - 陈奕迅</span>
+            </TopList>
+            <div style={{height: '0.05rem'}}></div>
+            <TopList thumb="http://dummyimage.com/300x300">
+              <span>演员 - 薛之谦</span>
+              <span>安和桥 - 宋冬野</span>
+              <span>十年 - 陈奕迅</span>
+            </TopList>
+            <Pane title="全球榜">
+              <MediaList type="music">
+                <MediaItem src="" alt="" title="网易20周年，我们与你一起走过" desc=""/>
+                <MediaItem src="" alt="" title="经典怀旧 | 哼着妈妈唱过的老歌" desc=""/>
+                <MediaItem src="" alt="" title="『不悔梦归处 只恨太匆匆』" desc=""/>
+                <MediaItem src="" alt="" title="网易20周年，我们与你一起走过" desc=""/>
+                <MediaItem src="" alt="" title="经典怀旧 | 哼着妈妈唱过的老歌" desc=""/>
+                <MediaItem src="" alt="" title="『不悔梦归处 只恨太匆匆』" desc=""/>
+              </MediaList>
+            </Pane>
+            <Pane title="用户榜">
+              <MediaList type="music">
+                <MediaItem src="" alt="" title="音乐达人榜" desc=""/>
+                <MediaItem src="" alt="" title="音乐新人榜" desc=""/>
+              </MediaList>
+            </Pane>
           </TabPane>
         </Tabs>
         <div style={{height: '1rem'}}></div>
