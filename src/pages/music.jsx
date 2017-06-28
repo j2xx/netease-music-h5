@@ -4,8 +4,6 @@ import NavBar from '../components/nav_bar';
 import Cell from '../components/cell';
 import Accordion from '../components/accordion';
 
-import TabBar from '../containers/tab_bar';
-
 import flipSvg from '../icons/flip.svg';
 import customerserviceSvg from '../icons/customerservice.svg';
 import playonSvg from '../icons/playon.svg';
@@ -14,7 +12,6 @@ import collectionSvg from '../icons/collection.svg';
 
 export default class Music extends Component {
   render () {
-    const { router } = this.props;
     return <div className="music">
       <NavBar left="更多" right={<Icon src={flipSvg}/>} title="我的音乐" />
       <div style={{height: '.9rem'}}></div>
@@ -36,8 +33,6 @@ export default class Music extends Component {
           黄梅戏
         </Cell>
       </Accordion>
-      <div style={{height: '1rem'}}></div>
-      <TabBar current="music" router={router}/>
     </div>
   }
 }

@@ -8,8 +8,6 @@ import Slider from '../components/slider';
 import Icon from '../components/icon';
 import Button from '../components/button';
 
-import TabBar from '../containers/tab_bar';
-
 import videoSvg from '../icons/video.svg';
 import remindSvg from '../icons/remind.svg';
 import stealthSvg from '../icons/stealth.svg';
@@ -24,7 +22,6 @@ const MediaItem = MediaList.MediaItem;
 class Home extends Component {
 
   render () {
-    const { router } = this.props;
     return (
       <div className="home">
         <SearchBar />
@@ -211,8 +208,6 @@ class Home extends Component {
             </Pane>
           </TabPane>
         </Tabs>
-        <div style={{height: '1rem'}}></div>
-        <TabBar current="home" router={router}/>
       </div>
     );
   }

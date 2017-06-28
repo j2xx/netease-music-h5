@@ -16,39 +16,41 @@ import mineFillSvg from '../icons/mine_fill.svg';
 const TabItem = TabBar.TabItem;
 
 class TabBarWarp extends Component {
-  componentDidMount () {
-    const { current, selected, changeTab } = this.props;
-    if (current !== selected) {
-      changeTab(current);
+
+  onClick = (tab) => {
+    const { selected, changeTab, router } = this.props;
+    if (tab !== selected) {
+      changeTab(tab);
+      router.push(`/${tab}`);
     }
   }
 
   render () {
-    const { selected, router } = this.props;
-    return <TabBar>
+    const selected = this.props.selected;
+    return <TabBar hide={!selected}>
       <TabItem 
         selected={selected==='home'} 
         icon={<Icon src={homepageSvg} />}
         selectedIcon={<Icon src={homepageFillSvg} />}
-        onClick={()=>router.push('/home')}
+        onClick={()=>this.onClick('home')}
       >发现音乐</TabItem>
       <TabItem 
         selected={selected==='music'} 
         icon={<Icon src={customerserviceSvg} />}
         selectedIcon={<Icon src={customerserviceFillSvg} />}
-        onClick={()=>router.push('/music')}
+        onClick={()=>this.onClick('music')}
       >我的音乐</TabItem>
       <TabItem 
         selected={selected==='group'} 
         icon={<Icon src={groupSvg} />}
         selectedIcon={<Icon src={groupFillSvg} />}
-        onClick={()=>router.push('/group')}
+        onClick={()=>this.onClick('group')}
       >朋友</TabItem>
       <TabItem 
         selected={selected==='mine'} 
         icon={<Icon src={mineSvg} />}
         selectedIcon={<Icon src={mineFillSvg} />}
-        onClick={()=>router.push('/mine')}
+        onClick={()=>this.onClick('mine')}
       >账号</TabItem>
     </TabBar>
   }

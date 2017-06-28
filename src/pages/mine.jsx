@@ -6,8 +6,6 @@ import Button from '../components/button';
 import Switch from '../components/switch';
 import User from '../components/user';
 
-import TabBar from '../containers/tab_bar';
-
 import flipSvg from '../icons/flip.svg';
 import flashlightSvg from '../icons/flashlight.svg';
 import mailSvg from '../icons/mail.svg';
@@ -25,7 +23,6 @@ import promptSvg from '../icons/prompt.svg';
 
 export default class Mine extends Component {
   render () {
-    const { router } = this.props;
     return <div className="mine">
       <NavBar right={<Icon src={flipSvg}/>} title="账号" />
       <div style={{height: '.9rem'}}></div>
@@ -54,8 +51,6 @@ export default class Mine extends Component {
       <Button size="lg">
         退出登录
       </Button>
-      <div style={{height: '1rem'}}></div>
-      <TabBar current="mine" router={router}/>
     </div>
   }
 }

@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "author": "JUNZI",
   "repository": "https://github.com/j2xx/netease-music-h5.git",
+  "homepage": "http://j2xx.com",
   "private": true,
   "dependencies": {
     "classnames": "^2.2.5",
